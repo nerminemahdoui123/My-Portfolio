@@ -1,18 +1,29 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
+import './Navbar.css';
 
 const Navbar = () => {
+  const handleScroll = (e, targetId) => {
+    e.preventDefault();
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <nav className="navbar">
-      <div className="logo">Mon Portfolio</div>
+      <div className="logo">
+        <span className="logo-light">Nermine</span>
+        <span className="logo-bold">Mahdoui</span>
+      </div>
       <ul className="nav-links">
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/projects">Projects</Link></li>
-        <li><Link to="/skills">Skills</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
+        <li><a href="#home" onClick={(e) => handleScroll(e, 'home')}>Home</a></li>
+        <li><a href="#about" onClick={(e) => handleScroll(e, 'about')}>About</a></li>
+        <li><a href="#projects" onClick={(e) => handleScroll(e, 'projects')}>Projects</a></li>
+        <li><a href="#skills" onClick={(e) => handleScroll(e, 'skills')}>Skills</a></li>
+        <li><a href="#contact" onClick={(e) => handleScroll(e, 'contact')}>Contact</a></li>
       </ul>
+      <div className="mobile-menu-icon">&#9776;</div>
     </nav>
   );
 };
