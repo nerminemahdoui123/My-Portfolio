@@ -1,0 +1,82 @@
+/* Home.css */
+.home-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  background-color: #111;
+  color: white;
+  padding: 0 20px;
+}
+
+.home-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.intro-text {
+  max-width: 50%;
+}
+
+.intro-text h1, .intro-text h2, .intro-text h3 {
+  font-size: 2rem;
+  color: white;
+}
+
+.intro-text p {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.social-icon {
+  font-size: 25px;
+  color: #00c8ff;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: white;
+}
+
+.download-cv {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #00c8ff;
+  color: white;
+  font-size: 16px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.download-cv:hover {
+  background-color: #0080b3;
+}
+
+.profile-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  background-color: #00c8ff;
+  border-radius: 50%;
+  box-shadow: 0 0 50px rgba(0, 200, 255, 0.7);
+  transition: all 0.3s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 80px rgba(0, 200, 255, 1);
+}
