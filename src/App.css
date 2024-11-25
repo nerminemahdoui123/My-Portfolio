@@ -1,125 +1,64 @@
-/* Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #1c1c1e; /* Foncé, élégant */
-  padding: 1rem 2rem;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #ffffff; /* Blanc pur */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #0d0f14; /* Fond noir pour toutes les pages */
+  color: white;
+  overflow-x: hidden;
 }
 
-.nav-links {
-  display: flex;
-  gap: 1.5rem;
-  list-style: none;
-}
-
-.nav-links a {
+a {
   text-decoration: none;
-  color: #d1d1d6; /* Gris clair pour contraste doux */
-  font-size: 1rem;
-  font-weight: 500;
+  color: inherit;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.nav-links a:hover {
-  color: #007aff; /* Accent bleu moderne */
-  transform: scale(1.1);
+a:hover {
+  text-decoration: underline;
+  transform: translateY(-2px);
 }
 
-/* Sections */
-section {
-  min-height: 100vh; /* Full height of the viewport */
-  padding: 100px 20px;
-  margin-top: 80px; /* Adjust for navbar height */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-#home {
-  background-color: #f5f5f7; /* Blanc cassé */
-}
-
-#about {
-  background-color: #e0e0e5; /* Gris clair élégant */
-}
-
-#projects {
-  background-color: #f8f9fa; /* Nuance de blanc très clair */
-}
-
-#skills {
-  background-color: #d6e4ff; /* Bleu clair professionnel */
-}
-
-#contact {
-  background-color: #dee2e6; /* Gris clair subtil */
-}
-
-/* Typographie générale */
-body {
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  color: #333333; /* Texte principal en gris foncé */
-}
-
-h1, h2, h3, h4 {
-  color: #1c1c1e; /* Titres en noir profond */
-}
-
-p {
-  color: #4a4a4a; /* Texte secondaire en gris moyen */
-}
-/* Fond de nuit avec des étoiles */
-.about-section {
-  background: linear-gradient(to bottom, #0e1a2b, #2c3e50); /* Effet de nuit */
-  background-image: url('https://cdn.pixabay.com/photo/2016/11/21/14/56/astronomy-1844924_960_720.jpg'); /* Image d'étoiles */
-  background-size: cover;
-  background-position: center;
-  min-height: 100vh; /* Remplit toute la hauteur de la fenêtre */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  text-align: center;
-  font-family: 'Arial', sans-serif;
-  position: relative;
-}
-
-.content-container {
-  z-index: 10; /* S'assure que le texte et l'icône sont au-dessus de l'image de fond */
-}
-
-h2 {
-  font-size: 3rem;
-  font-weight: bold;
-  margin: 20px 0;
-}
-
-p {
-  font-size: 1.2rem;
-  max-width: 600px;
+/* Responsive utilities */
+.container {
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 20px;
 }
 
-/* Icône étoile */
-.star-icon {
-  font-size: 4rem;
-  color: #1e90ff; /* Bleu lumineux */
-  margin-bottom: 20px;
+.section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+/* Global social link styles */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-links a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #1a1c23, #0d0f14);
+  color: #f5b921;
+  font-size: 1.5rem;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(245, 185, 33, 0.4);
 }

@@ -1,5 +1,5 @@
 .navbar {
-  background-color: #1f5156;
+  background-color: black;
   height: 80px;
   display: flex;
   justify-content: center;
@@ -21,13 +21,12 @@
 }
 
 .nav-logo {
-  color: blue;
+  color: #f5b921;
   margin-left: 20px;
   cursor: pointer;
   text-decoration: none;
   font-size: 2rem;
   flex-grow: 1;
-
   display: flex;
   align-items: center;
 }
@@ -57,26 +56,14 @@
 .nav-item {
   line-height: 40px;
   margin-right: 1rem;
-  position: relative;
 }
 
-.nav-item:after {
-  content: "";
-  display: block;
-  height: 3px;
-  width: 0;
-  background: transparent;
-  transition: width 0.4s ease, background-color 0.4s ease;
-}
-
-.nav-item:hover:after {
-  width: 100%;
-  background: #4093ff;
+.nav-item:hover {
+  color: #2125f5;
 }
 
 .nav-item .active {
   color: #4093ff;
-  border-bottom: 3px solid #4093ff;
 }
 
 .nav-icon {
@@ -107,7 +94,6 @@
     background: #1f5156;
     left: 0;
     opacity: 1;
-    transition: all 0.5s ease;
     z-index: 1;
   }
 
@@ -117,25 +103,12 @@
     display: table;
   }
 
-  .nav-item .active {
-    color: #ffdd40;
-    border-bottom: none;
-  }
-
-  .nav-logo .icon {
-    width: 2rem;
-    height: 2rem;
-  }
-
   .nav-icon {
     display: block;
     position: absolute;
     top: 50%;
     right: 0;
     transform: translate(-100%, -50%);
-    width: 2rem;
-    height: 2rem;
     cursor: pointer;
-    color: #4093ff;
   }
 }
