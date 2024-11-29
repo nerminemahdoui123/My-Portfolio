@@ -4,23 +4,20 @@ import { AiOutlineInstagram } from "react-icons/ai";
 import { GiEarthAmerica } from "react-icons/gi";
 import { FaLinkedinIn } from "react-icons/fa";
 import { Slide } from "react-awesome-reveal";
-
+import { FaSmile } from "react-icons/fa";
 const MeComponent = () => {
   return (
     <Container id="home">
       <Slide direction="left">
         <Texts>
           <h4>
-            Hello <span className="green">I'am</span>
+            Hello  <FaSmile /> <span className="blue">I'am</span>
           </h4>
-          <h1 className="green">Nermine Mahdoui</h1>
+          <h1 className="blue">Nermine Mahdoui</h1>
           <h3>welcome to nermine world</h3>
-          <p>
-            this website describe me and my projects
-          </p>
+          <p>this website describe me and my projects</p>
           <button>Let's talk</button>
           <Social>
-            <p>Check out my</p>
             <div className="social-icons">
               <span>
                 <a href="/">
@@ -93,14 +90,18 @@ const Texts = styled.div`
     padding: 0.7rem 2rem;
     margin-top: 3rem;
     cursor: pointer;
-    background-color: #01be96;
+    background-color: #304674;
     border: none;
     color: #fff;
     font-weight: 500;
-    filter: drop-shadow(0px 10px 10px #01be9551);
+    filter: drop-shadow(0px 10px 10px #304674);
     :hover {
-      filter: drop-shadow(0px 10px 10px #01be9570);
+      filter: drop-shadow(0px 10px 10px #304674);
     }
+  }
+
+  .blue {
+    color: #304674;
   }
 `;
 const Social = styled.div`
@@ -108,38 +109,44 @@ const Social = styled.div`
   display: flex;
   align-items: center;
   gap: 1rem;
-  p {
-    font-size: 0.9rem;
-    @media (max-width: 690px) {
-      font-size: 0.7rem;
-    }
-  }
 
   .social-icons {
     display: flex;
     align-items: center;
     gap: 1rem;
+
     span {
-      width: 2.3rem;
-      height: 2rem;
-      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-      background-color: #01be96;
-      position: relative;
-      transition: transform 400ms ease-in-out;
+      width: 2.5rem;
+      height: 2.5rem;
+      background-color: #f0f0f0;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+
       :hover {
-        transform: rotate(360deg);
+        transform: scale(1.2);
+      }
+
+      &:nth-child(1) {
+        background-color: #0077b5;
+      }
+      &:nth-child(2) {
+        background-color: #0077b5;
+      }
+      &:nth-child(3) {
+        background-color: #0077b5;
       }
     }
 
     a {
       color: #fff;
-      position: absolute;
-      top: 55%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      font-size: 1.2rem;
     }
   }
 `;
+
 const Profile = styled.div`
   img {
     width: 25rem;

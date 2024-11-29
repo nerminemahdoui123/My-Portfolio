@@ -13,10 +13,10 @@ function App() {
         <MeComponent />
       </Banner>
       <Services />
+      <Describe />
       <LightColor>
         <Projects />
       </LightColor>
-      <Describe />
       <LightColor>
         <Footer />
       </LightColor>

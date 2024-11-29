@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { GiCandleFlame } from "react-icons/gi";
+import { FaCode } from "react-icons/fa";
 
 const Header = () => {
   const [bar, setBar] = useState(false);
   return (
     <Container bar={bar}>
       <Logo>
-        <span className="green">
-          <GiCandleFlame />
+        <span className="blue">
+        <FaCode />
         </span>
         <h1>Nermine Mahdoui</h1>
       </Logo>
@@ -17,14 +17,15 @@ const Header = () => {
           <a href="#home">Home</a>
         </span>
         <span>
+          <a href="#describe">About</a>
+        </span>
+        <span>
           <a href="#service">Services</a>
         </span>
         <span>
           <a href="#project">Projects</a>
         </span>
-        <span>
-          <a href="#describe">About</a>
-        </span>
+       
         <span>
           <a href="#footer">Contact</a>
         </span>

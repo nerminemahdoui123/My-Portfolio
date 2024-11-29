@@ -13,16 +13,13 @@ const Describe = () => {
       <Card>
         <Profile>
           <ProfileWrapper>
-            <img 
-              src="https://t4.ftcdn.net/jpg/02/90/27/39/360_F_290273933_ukYZjDv8nqgpOBcBUo5CQyFcxAzYlZRW.jpg" 
-              alt="Profile" 
-            />
+          
             <FaFemale className="icon" />
           </ProfileWrapper>
         </Profile>
         <Content>
           <p>
-            I am a **Software Engineering student** specializing in **mobile and web development**. I combine advanced technical skills, rapid adaptability to new technologies, and a strong focus on user experience to design innovative and high-performance solutions.
+            I am a Software Engineering student specializing in mobile and web development. I combine advanced technical skills, rapid adaptability to new technologies, and a strong focus on user experience to design innovative and high-performance solutions.
           </p>
           <Icons>
             <div>
@@ -59,7 +56,7 @@ const Container = styled.div`
   span {
     font-weight: 700;
     text-transform: uppercase;
-    color: #01be96;
+    color: #304674;
   }
 
   h1 {
@@ -135,7 +132,7 @@ const Icons = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #01be96;
+    color: #304674;
 
     .icon {
       font-size: 2rem;

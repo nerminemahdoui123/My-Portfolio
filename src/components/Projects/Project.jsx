@@ -1,67 +1,43 @@
-import React from 'react'
+import React from 'react';
 import styled from 'styled-components';
 
-const Project = (props) => {
-    const { img, disc } = props.item;
-  return (
-    <Container className='project'>
-        <img src={img} alt="project" />
-        <div className="disc">
-            <h1>Description</h1>
-            <p>{disc}
-            <a href="/">demo</a>
-            </p>
-        </div>
-    </Container>
-  )
-}
+const Project = ({ item }) => {
+    return (
+        <Card>
+            <ImageContainer>
+                <img src={item.img} alt="project" />
+            </ImageContainer>
+            <p>{item.disc}</p>
+        </Card>
+    );
+};
 
 export default Project;
 
-const Container = styled.div`
-    height: 10rem;
-    background-color: #4e5156;
-    margin: 0 0.5rem;
-    padding: 0.5rem;
-    border-radius: 5px;
-    cursor: pointer;
-    position: relative;
+const Card = styled.div`
+    padding: 1rem;
+    text-align: center;
+    background: linear-gradient(159deg, rgb(45, 45, 58) 0%, rgb(43, 43, 53) 100%);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 1rem;
+`;
+
+const ImageContainer = styled.div`
+    width: 100%;
+    height: 300px; /* Augmenter la hauteur pour afficher plus de l'image */
     overflow: hidden;
-    img{
+    border-radius: 10px;
+    padding: 10px; /* Ajouter un peu de padding pour espacer l'image des bords */
+
+    img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
-        transition: transform 400ms ease-in-out;
-    }
-    .disc{
-        position: absolute;
-        right: 0;
-        left: 0;
-        bottom: -10rem;
-        text-align: left;
-        padding: 0.5rem;
-        background: linear-gradient(rgba(0,0,0, 0.100), rgba(0,0,0, 0.80));
-        transition: all 400ms ease-in-out;
-        h1{
-            font-size: 1rem;
-        }
-    
-        p{
-            width: 90%;
-            font-size: 0.8rem;
-            a{
-                margin-left: 0.4rem;
-                color: red;
-            }
-        }
+        object-fit: contain; /* Permet d'afficher toute l'image sans la couper */
+        transition: transform 0.3s ease-in-out;
     }
 
-    :hover > img{
-        transform: scale(1.3);
+    img:hover {
+        transform: scale(1.05); /* Zoom léger au survol */
     }
-
-    :hover > .disc{
-        bottom: 0;
-    }
-
-`
+`;

@@ -72,7 +72,7 @@ const StyledCard = styled(Card)`
   align-items: center;
   height: 350px; /* Hauteur uniforme pour toutes les cartes */
   padding: 1rem;
-  background-color: #f8f8f8;
+  background-color: #304674;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
